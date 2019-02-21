@@ -1,0 +1,19 @@
+Source: bcmrpi3-kernel-bis
+Priority: extra
+Maintainer: Serge Schneider <serge@raspberrypi.org>
+Build-Depends: debhelper (>= 8.0.0), quilt
+Standards-Version: 3.9.8
+Section: libs
+Homepage: https://github.com/sakaki-/bcmrpi3-kernel-bis
+Vcs-Git: git@github.com:sakaki-/bcmrpi3-kernel-bis.git
+Vcs-Browser: https://github.com/sakaki-/bcmrpi3-kernel-bis
+
+Package: bcmrpi3-kernel-bis
+Section: kernel
+Architecture: armhf
+Depends: ${misc:Depends}
+Conflicts: raspberrypi-kernel
+Provides: linux-image
+Description: Sakaki's tweaked 64-bit kernel
+ Sakaki's tweaked version of the 64-bit bcmrpi3_defconfig
+ Linux kernel for the RPi3B/B+

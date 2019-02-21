@@ -1,0 +1,17 @@
+#!/bin/sh
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/COPYING.linux /boot/COPYING.linux
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/System.map /boot/System.map
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2710-rpi-3-b-plus.dtb /boot/bcm2710-rpi-3-b-plus.dtb
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2710-rpi-3-b.dtb /boot/bcm2710-rpi-3-b.dtb
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2837-rpi-3-b.dtb /boot/bcm2837-rpi-3-b.dtb
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/config /boot/config
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/kernel8.img /boot/kernel8.img
+INITRD=${INITRD:-"No"}
+export INITRD
+if [ -d "/etc/kernel/preinst.d" ]; then
+  run-parts -v --report --exit-on-error --arg=4.14.97-v8-60feca6ea3fa-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+fi
+if [ -d "/etc/kernel/preinst.d/4.14.97-v8-60feca6ea3fa-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.14.97-v8-60feca6ea3fa-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.14.97-v8-60feca6ea3fa-bis+
+fi
+#DEBHELPER#
