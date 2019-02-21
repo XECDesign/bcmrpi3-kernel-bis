@@ -1,3 +1,12 @@
+bcmrpi3-kernel-bis (4.14.98.20190219-1) stretch; urgency=medium
+
+  * New upstream version 4.14.98.20190219
+  * Add gbp.conf
+  * gen_bootloader_postinst_preinst.sh: Add overlays
+  * Regenerate maintainer scripts
+
+ -- xecdesign.com autobuilder <autobuilder@xecdesign.com>  Thu, 21 Feb 2019 20:37:55 +0000
+
 bcmrpi3-kernel-bis (4.14.97.20190212-1) stretch; urgency=medium
 
   * Initial release
