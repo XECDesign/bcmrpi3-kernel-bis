@@ -10,7 +10,10 @@ version=`ls ../lib/modules/ | head -n1`
 printf "#!/bin/sh\n" > bcmrpi3-kernel-bis.postinst
 printf "#!/bin/sh\n" > bcmrpi3-kernel-bis.preinst
 
-for FN in ../boot/*; do
+printf "mkdir -p /usr/share/rpikernelhack/overlays\n" >> bcmrpi3-kernel-bis.preinst
+printf "mkdir -p /boot/overlays\n" >> bcmrpi3-kernel-bis.preinst
+
+for FN in ../boot/COPYING.linux ../boot/*.map ../boot/*.dtb ../boot/config ../boot/kernel*.img ../boot/overlays/*; do
   if ! [ -d "$FN" ]; then
     FN=${FN#../boot/}
     printf "if [ -f /usr/share/rpikernelhack/$FN ]; then\n" >> bcmrpi3-kernel-bis.postinst
