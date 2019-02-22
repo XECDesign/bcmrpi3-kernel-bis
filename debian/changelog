@@ -1,3 +1,11 @@
+bcmrpi3-kernel-bis (4.14.98.20190219-3) stretch; urgency=medium
+
+  * gbp.conf: default to armhf
+  * gbp.conf: fix options
+  * Override extra-license-file
+
+ -- xecdesign.com autobuilder <autobuilder@xecdesign.com>  Fri, 22 Feb 2019 11:15:11 +0000
+
 bcmrpi3-kernel-bis (4.14.98.20190219-2) stretch; urgency=medium
 
   * gbp.conf: use sbuild
