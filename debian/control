@@ -1,5 +1,5 @@
 Source: bcmrpi3-kernel-bis
-Priority: extra
+Priority: optional
 Maintainer: Serge Schneider <serge@raspberrypi.org>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.8
