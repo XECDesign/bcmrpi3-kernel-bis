@@ -1,3 +1,9 @@
+bcmrpi3-kernel-bis (4.19.23.20190221-2) stretch; urgency=medium
+
+  * Fix watch file
+
+ -- xecdesign.com autobuilder <autobuilder@xecdesign.com>  Fri, 22 Feb 2019 13:06:23 +0000
+
 bcmrpi3-kernel-bis (4.19.23.20190221-1) stretch; urgency=medium
 
   * New upstream version 4.19.23.20190221
