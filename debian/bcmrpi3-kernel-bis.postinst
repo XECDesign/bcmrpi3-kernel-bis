@@ -284,6 +284,11 @@ if [ -f /usr/share/rpikernelhack/overlays/hifiberry-dacplus.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-dacplus.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/hifiberry-dacplusadc.dtbo ]; then
+	rm -f /boot/overlays/hifiberry-dacplusadc.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-dacplusadc.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/hifiberry-digi-pro.dtbo ]; then
 	rm -f /boot/overlays/hifiberry-digi-pro.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-digi-pro.dtbo
@@ -387,11 +392,6 @@ fi
 if [ -f /usr/share/rpikernelhack/overlays/justboom-digi.dtbo ]; then
 	rm -f /boot/overlays/justboom-digi.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/justboom-digi.dtbo
-	sync
-fi
-if [ -f /usr/share/rpikernelhack/overlays/lirc-rpi.dtbo ]; then
-	rm -f /boot/overlays/lirc-rpi.dtbo
-	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/lirc-rpi.dtbo
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/overlays/ltc294x.dtbo ]; then
@@ -812,9 +812,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.14.98-v8-877656cd1454-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.23-v8-e2d294132692-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.14.98-v8-877656cd1454-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.14.98-v8-877656cd1454-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.14.98-v8-877656cd1454-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.23-v8-e2d294132692-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.23-v8-e2d294132692-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.23-v8-e2d294132692-bis+
 fi
 #DEBHELPER#
