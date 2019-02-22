@@ -1,3 +1,10 @@
+bcmrpi3-kernel-bis (4.19.23.20190221-1) stretch; urgency=medium
+
+  * New upstream version 4.19.23.20190221
+  * Regenerate maintainer scripts
+
+ -- xecdesign.com autobuilder <autobuilder@xecdesign.com>  Fri, 22 Feb 2019 12:49:43 +0000
+
 bcmrpi3-kernel-bis (4.14.98.20190219-4) stretch; urgency=medium
 
   * postrm: remove /usr/share/rpikernelhack
