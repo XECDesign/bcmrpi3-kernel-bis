@@ -7,4 +7,8 @@ fi
 if [ -d "/etc/kernel/postrm.d/4.14.98-v8-877656cd1454-bis+" ]; then
   run-parts -v --report --exit-on-error --arg=4.14.98-v8-877656cd1454-bis+ --arg=/boot/kernel8.img /etc/kernel/postrm.d/4.14.98-v8-877656cd1454-bis+
 fi
+
+if [ -d "/usr/share/rpikernelhack" ]; then
+  rmdir /usr/share/rpikernelhack/overlays --ignore-fail-on-non-empty -p
+fi
 #DEBHELPER#
