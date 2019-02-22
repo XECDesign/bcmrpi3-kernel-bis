@@ -1,6 +1,7 @@
 Source: bcmrpi3-kernel-bis
 Priority: optional
 Maintainer: Serge Schneider <serge@raspberrypi.org>
+Uploaders: xecdesign.com autobuilder <autobuilder@xecdesign.com>
 Build-Depends: debhelper (>= 10)
 Standards-Version: 3.9.8
 Section: libs
