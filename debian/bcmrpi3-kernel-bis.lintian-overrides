@@ -1,1 +1,2 @@
 bcmrpi3-kernel-bis: binary-from-other-architecture lib/*
+bcmrpi3-kernel-bis: extra-license-file boot/COPYING.linux
