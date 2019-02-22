@@ -5,7 +5,7 @@ Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://github.com/sakaki-/bcmrpi3-kernel-bis
-Vcs-Git: git@github.com:sakaki-/bcmrpi3-kernel-bis.git
+Vcs-Git: https://github.com/sakaki-/bcmrpi3-kernel-bis.git
 Vcs-Browser: https://github.com/sakaki-/bcmrpi3-kernel-bis
 
 Package: bcmrpi3-kernel-bis
