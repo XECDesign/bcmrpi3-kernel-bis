@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postrm.d" ]; then

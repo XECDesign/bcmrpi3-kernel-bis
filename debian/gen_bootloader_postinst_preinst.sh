@@ -7,8 +7,8 @@ fi
 
 version=`ls ../lib/modules/ | head -n1`
 
-printf "#!/bin/sh\n" > bcmrpi3-kernel-bis.postinst
-printf "#!/bin/sh\n" > bcmrpi3-kernel-bis.preinst
+printf "#!/bin/sh -e\n" > bcmrpi3-kernel-bis.postinst
+printf "#!/bin/sh -e\n" > bcmrpi3-kernel-bis.preinst
 
 printf "mkdir -p /usr/share/rpikernelhack/overlays\n" >> bcmrpi3-kernel-bis.preinst
 printf "mkdir -p /boot/overlays\n" >> bcmrpi3-kernel-bis.preinst
@@ -51,8 +51,8 @@ EOF
 printf "#DEBHELPER#\n" >> bcmrpi3-kernel-bis.postinst
 printf "#DEBHELPER#\n" >> bcmrpi3-kernel-bis.preinst
 
-printf "#!/bin/sh\n" > bcmrpi3-kernel-bis.prerm
-printf "#!/bin/sh\n" > bcmrpi3-kernel-bis.postrm
+printf "#!/bin/sh -e\n" > bcmrpi3-kernel-bis.prerm
+printf "#!/bin/sh -e\n" > bcmrpi3-kernel-bis.postrm
 
 cat <<EOF >> bcmrpi3-kernel-bis.prerm
 INITRD=\${INITRD:-"No"}

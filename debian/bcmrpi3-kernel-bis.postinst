@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 if [ -f /usr/share/rpikernelhack/COPYING.linux ]; then
 	rm -f /boot/COPYING.linux
 	dpkg-divert --package rpikernelhack --remove --rename /boot/COPYING.linux

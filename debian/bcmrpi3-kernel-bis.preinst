@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 mkdir -p /usr/share/rpikernelhack/overlays
 mkdir -p /boot/overlays
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/COPYING.linux /boot/COPYING.linux
