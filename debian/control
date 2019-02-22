@@ -1,7 +1,7 @@
 Source: bcmrpi3-kernel-bis
 Priority: optional
 Maintainer: Serge Schneider <serge@raspberrypi.org>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 10)
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://github.com/sakaki-/bcmrpi3-kernel-bis
