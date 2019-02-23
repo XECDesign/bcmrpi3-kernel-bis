@@ -75,7 +75,7 @@ if [ -d "/etc/kernel/postrm.d/${version}" ]; then
   run-parts -v --report --exit-on-error --arg=${version} --arg=/boot/kernel8.img /etc/kernel/postrm.d/${version}
 fi
 
-if [ -d "/usr/share/rpikernelhack" ]; then
+if [ -d /usr/share/rpikernelhack/overlays ]; then
   rmdir /usr/share/rpikernelhack/overlays --ignore-fail-on-non-empty -p
 fi
 EOF
