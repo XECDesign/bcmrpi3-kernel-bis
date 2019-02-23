@@ -1,3 +1,9 @@
+bcmrpi3-kernel-bis (4.19.23.20190221-3) stretch; urgency=medium
+
+  * Fix postrm
+
+ -- xecdesign.com autobuilder <autobuilder@xecdesign.com>  Sat, 23 Feb 2019 00:15:07 +0000
+
 bcmrpi3-kernel-bis (4.19.23.20190221-2) stretch; urgency=medium
 
   * Fix watch file
