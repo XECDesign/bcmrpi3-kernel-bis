@@ -812,9 +812,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.25-v8-78eb13b25d5e-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.25-v8-7f41587c0013-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.25-v8-78eb13b25d5e-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.25-v8-78eb13b25d5e-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.25-v8-78eb13b25d5e-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.25-v8-7f41587c0013-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.25-v8-7f41587c0013-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.25-v8-7f41587c0013-bis+
 fi
 #DEBHELPER#
