@@ -184,6 +184,11 @@ if [ -f /usr/share/rpikernelhack/overlays/dpi24.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/dpi24.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/draws.dtbo ]; then
+	rm -f /boot/overlays/draws.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/draws.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/dwc-otg.dtbo ]; then
 	rm -f /boot/overlays/dwc-otg.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/dwc-otg.dtbo
@@ -312,6 +317,11 @@ fi
 if [ -f /usr/share/rpikernelhack/overlays/hy28b.dtbo ]; then
 	rm -f /boot/overlays/hy28b.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hy28b.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/i-sabre-q2m.dtbo ]; then
+	rm -f /boot/overlays/i-sabre-q2m.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i-sabre-q2m.dtbo
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/overlays/i2c-bcm2708.dtbo ]; then
@@ -764,6 +774,11 @@ if [ -f /usr/share/rpikernelhack/overlays/uart1.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/uart1.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/udrc.dtbo ]; then
+	rm -f /boot/overlays/udrc.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/udrc.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/upstream-aux-interrupt.dtbo ]; then
 	rm -f /boot/overlays/upstream-aux-interrupt.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/upstream-aux-interrupt.dtbo
@@ -812,9 +827,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.32-v8-1026f584d33f-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.32-v8-4a16392a2e63-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.32-v8-1026f584d33f-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.32-v8-1026f584d33f-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.32-v8-1026f584d33f-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.32-v8-4a16392a2e63-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.32-v8-4a16392a2e63-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.32-v8-4a16392a2e63-bis+
 fi
 #DEBHELPER#

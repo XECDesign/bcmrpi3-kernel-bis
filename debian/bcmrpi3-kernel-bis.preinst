@@ -38,6 +38,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/d
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/dionaudio-loco.dtbo /boot/overlays/dionaudio-loco.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/dpi18.dtbo /boot/overlays/dpi18.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/dpi24.dtbo /boot/overlays/dpi24.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/draws.dtbo /boot/overlays/draws.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/dwc-otg.dtbo /boot/overlays/dwc-otg.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/dwc2.dtbo /boot/overlays/dwc2.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/enc28j60-spi2.dtbo /boot/overlays/enc28j60-spi2.dtbo
@@ -64,6 +65,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/h
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hy28a.dtbo /boot/overlays/hy28a.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hy28b-2017.dtbo /boot/overlays/hy28b-2017.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hy28b.dtbo /boot/overlays/hy28b.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i-sabre-q2m.dtbo /boot/overlays/i-sabre-q2m.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c-bcm2708.dtbo /boot/overlays/i2c-bcm2708.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c-gpio.dtbo /boot/overlays/i2c-gpio.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c-mux.dtbo /boot/overlays/i2c-mux.dtbo
@@ -154,6 +156,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/t
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/tpm-slb9670.dtbo /boot/overlays/tpm-slb9670.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/uart0.dtbo /boot/overlays/uart0.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/uart1.dtbo /boot/overlays/uart1.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/udrc.dtbo /boot/overlays/udrc.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/upstream-aux-interrupt.dtbo /boot/overlays/upstream-aux-interrupt.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/upstream.dtbo /boot/overlays/upstream.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/vc4-fkms-v3d.dtbo /boot/overlays/vc4-fkms-v3d.dtbo
@@ -166,9 +169,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.32-v8-1026f584d33f-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.32-v8-4a16392a2e63-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.32-v8-1026f584d33f-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.32-v8-1026f584d33f-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.32-v8-1026f584d33f-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.32-v8-4a16392a2e63-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.32-v8-4a16392a2e63-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.32-v8-4a16392a2e63-bis+
 fi
 #DEBHELPER#
