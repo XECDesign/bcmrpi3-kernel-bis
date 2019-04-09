@@ -76,6 +76,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c0-bcm2708.dtbo /boot/overlays/i2c0-bcm2708.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c1-bcm2708.dtbo /boot/overlays/i2c1-bcm2708.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2s-gpio28-31.dtbo /boot/overlays/i2s-gpio28-31.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/ilitek251x.dtbo /boot/overlays/ilitek251x.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/iqaudio-dac.dtbo /boot/overlays/iqaudio-dac.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/iqaudio-dacplus.dtbo /boot/overlays/iqaudio-dacplus.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/iqaudio-digi-wm8804-audio.dtbo /boot/overlays/iqaudio-digi-wm8804-audio.dtbo
@@ -169,9 +170,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.32-v8-4a16392a2e63-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.34-v8-43958a67195d-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.32-v8-4a16392a2e63-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.32-v8-4a16392a2e63-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.32-v8-4a16392a2e63-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.34-v8-43958a67195d-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.34-v8-43958a67195d-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.34-v8-43958a67195d-bis+
 fi
 #DEBHELPER#
