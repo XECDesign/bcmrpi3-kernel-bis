@@ -414,6 +414,11 @@ if [ -f /usr/share/rpikernelhack/overlays/ltc294x.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/ltc294x.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/max98357a.dtbo ]; then
+	rm -f /boot/overlays/max98357a.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/max98357a.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/mbed-dac.dtbo ]; then
 	rm -f /boot/overlays/mbed-dac.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/mbed-dac.dtbo
@@ -832,9 +837,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.34-v8-43958a67195d-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.34-v8-6dabe04c8294-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.34-v8-43958a67195d-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.34-v8-43958a67195d-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.34-v8-43958a67195d-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.34-v8-6dabe04c8294-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.34-v8-6dabe04c8294-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.34-v8-6dabe04c8294-bis+
 fi
 #DEBHELPER#

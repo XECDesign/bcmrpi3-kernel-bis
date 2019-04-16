@@ -84,6 +84,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/j
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/justboom-dac.dtbo /boot/overlays/justboom-dac.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/justboom-digi.dtbo /boot/overlays/justboom-digi.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/ltc294x.dtbo /boot/overlays/ltc294x.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/max98357a.dtbo /boot/overlays/max98357a.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/mbed-dac.dtbo /boot/overlays/mbed-dac.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/mcp23017.dtbo /boot/overlays/mcp23017.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/mcp23s17.dtbo /boot/overlays/mcp23s17.dtbo
@@ -170,9 +171,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.34-v8-43958a67195d-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.34-v8-6dabe04c8294-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.34-v8-43958a67195d-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.34-v8-43958a67195d-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.34-v8-43958a67195d-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.34-v8-6dabe04c8294-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.34-v8-6dabe04c8294-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.34-v8-6dabe04c8294-bis+
 fi
 #DEBHELPER#
