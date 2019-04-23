@@ -171,9 +171,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.34-v8-6dabe04c8294-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.36-v8-210f0d394380-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.34-v8-6dabe04c8294-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.34-v8-6dabe04c8294-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.34-v8-6dabe04c8294-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.36-v8-210f0d394380-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.36-v8-210f0d394380-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.36-v8-210f0d394380-bis+
 fi
 #DEBHELPER#
