@@ -106,6 +106,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/p
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/pi3-disable-wifi.dtbo /boot/overlays/pi3-disable-wifi.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/pi3-miniuart-bt.dtbo /boot/overlays/pi3-miniuart-bt.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/pibell.dtbo /boot/overlays/pibell.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/piglow.dtbo /boot/overlays/piglow.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/piscreen.dtbo /boot/overlays/piscreen.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/piscreen2r.dtbo /boot/overlays/piscreen2r.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/pisound.dtbo /boot/overlays/pisound.dtbo
@@ -171,9 +172,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.36-v8-210f0d394380-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.36-v8-4c15822241d8-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.36-v8-210f0d394380-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.36-v8-210f0d394380-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.36-v8-210f0d394380-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.36-v8-4c15822241d8-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.36-v8-4c15822241d8-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.36-v8-4c15822241d8-bis+
 fi
 #DEBHELPER#
