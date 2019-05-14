@@ -379,6 +379,11 @@ if [ -f /usr/share/rpikernelhack/overlays/ilitek251x.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/ilitek251x.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/iqaudio-codec.dtbo ]; then
+	rm -f /boot/overlays/iqaudio-codec.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/iqaudio-codec.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/iqaudio-dac.dtbo ]; then
 	rm -f /boot/overlays/iqaudio-dac.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/iqaudio-dac.dtbo
@@ -842,9 +847,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.37-v8-11111f59e198-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.42-v8-43f2cb3b6385-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.37-v8-11111f59e198-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.37-v8-11111f59e198-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.37-v8-11111f59e198-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.42-v8-43f2cb3b6385-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.42-v8-43f2cb3b6385-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.42-v8-43f2cb3b6385-bis+
 fi
 #DEBHELPER#
