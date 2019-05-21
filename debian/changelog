@@ -1,3 +1,11 @@
+bcmrpi3-kernel-bis (4.19.44.20190521-1) stretch; urgency=medium
+
+  * New upstream version 4.19.44.20190521
+  * New upstream version 4.19.44.20190521
+  * Regenerate maintainer scripts
+
+ -- xecdesign.com autobuilder <autobuilder@xecdesign.com>  Tue, 21 May 2019 14:26:46 +0000
+
 bcmrpi3-kernel-bis (4.19.42.20190514-1) stretch; urgency=medium
 
   * New upstream version 4.19.42.20190514
