@@ -39,11 +39,6 @@ if [ -f /usr/share/rpikernelhack/kernel8.img ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/kernel8.img
 	sync
 fi
-if [ -f /usr/share/rpikernelhack/overlays/3dlab-nano-player.dtbo ]; then
-	rm -f /boot/overlays/3dlab-nano-player.dtbo
-	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/3dlab-nano-player.dtbo
-	sync
-fi
 if [ -f /usr/share/rpikernelhack/overlays/README ]; then
 	rm -f /boot/overlays/README
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/README
@@ -847,9 +842,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.42-v8-43f2cb3b6385-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.42-v8-43f2cb3b6385-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.42-v8-43f2cb3b6385-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.42-v8-43f2cb3b6385-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.44-v8-2b1a992899f7-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.44-v8-2b1a992899f7-bis+
 fi
 #DEBHELPER#

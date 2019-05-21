@@ -9,7 +9,6 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2710-rp
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2837-rpi-3-b.dtb /boot/bcm2837-rpi-3-b.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/config /boot/config
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/kernel8.img /boot/kernel8.img
-dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/3dlab-nano-player.dtbo /boot/overlays/3dlab-nano-player.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/README /boot/overlays/README
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/adau1977-adc.dtbo /boot/overlays/adau1977-adc.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/adau7002-simple.dtbo /boot/overlays/adau7002-simple.dtbo
@@ -173,9 +172,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.42-v8-43f2cb3b6385-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.42-v8-43f2cb3b6385-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.42-v8-43f2cb3b6385-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.42-v8-43f2cb3b6385-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.44-v8-2b1a992899f7-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.44-v8-2b1a992899f7-bis+
 fi
 #DEBHELPER#
