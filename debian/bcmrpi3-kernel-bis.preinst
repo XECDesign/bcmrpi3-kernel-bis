@@ -134,7 +134,6 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/s
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/sc16is752-i2c.dtbo /boot/overlays/sc16is752-i2c.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/sc16is752-spi1.dtbo /boot/overlays/sc16is752-spi1.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/sdhost.dtbo /boot/overlays/sdhost.dtbo
-dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/sdio-1bit.dtbo /boot/overlays/sdio-1bit.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/sdio.dtbo /boot/overlays/sdio.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/sdtweak.dtbo /boot/overlays/sdtweak.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/smi-dev.dtbo /boot/overlays/smi-dev.dtbo
@@ -160,7 +159,6 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/t
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/uart0.dtbo /boot/overlays/uart0.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/uart1.dtbo /boot/overlays/uart1.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/udrc.dtbo /boot/overlays/udrc.dtbo
-dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/upstream-aux-interrupt.dtbo /boot/overlays/upstream-aux-interrupt.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/upstream.dtbo /boot/overlays/upstream.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/vc4-fkms-v3d.dtbo /boot/overlays/vc4-fkms-v3d.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/vc4-kms-kippah-7inch.dtbo /boot/overlays/vc4-kms-kippah-7inch.dtbo
@@ -172,9 +170,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-1694cf065778-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.44-v8-2b1a992899f7-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.44-v8-2b1a992899f7-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.44-v8-1694cf065778-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-1694cf065778-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.44-v8-1694cf065778-bis+
 fi
 #DEBHELPER#

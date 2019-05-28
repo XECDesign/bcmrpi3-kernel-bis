@@ -664,11 +664,6 @@ if [ -f /usr/share/rpikernelhack/overlays/sdhost.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/sdhost.dtbo
 	sync
 fi
-if [ -f /usr/share/rpikernelhack/overlays/sdio-1bit.dtbo ]; then
-	rm -f /boot/overlays/sdio-1bit.dtbo
-	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/sdio-1bit.dtbo
-	sync
-fi
 if [ -f /usr/share/rpikernelhack/overlays/sdio.dtbo ]; then
 	rm -f /boot/overlays/sdio.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/sdio.dtbo
@@ -794,11 +789,6 @@ if [ -f /usr/share/rpikernelhack/overlays/udrc.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/udrc.dtbo
 	sync
 fi
-if [ -f /usr/share/rpikernelhack/overlays/upstream-aux-interrupt.dtbo ]; then
-	rm -f /boot/overlays/upstream-aux-interrupt.dtbo
-	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/upstream-aux-interrupt.dtbo
-	sync
-fi
 if [ -f /usr/share/rpikernelhack/overlays/upstream.dtbo ]; then
 	rm -f /boot/overlays/upstream.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/upstream.dtbo
@@ -842,9 +832,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-1694cf065778-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.44-v8-2b1a992899f7-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.44-v8-2b1a992899f7-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.44-v8-2b1a992899f7-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.44-v8-1694cf065778-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.44-v8-1694cf065778-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.44-v8-1694cf065778-bis+
 fi
 #DEBHELPER#
