@@ -24,6 +24,11 @@ if [ -f /usr/share/rpikernelhack/bcm2710-rpi-cm3.dtb ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/bcm2710-rpi-cm3.dtb
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/bcm2711-rpi-4-b.dtb ]; then
+	rm -f /boot/bcm2711-rpi-4-b.dtb
+	dpkg-divert --package rpikernelhack --remove --rename /boot/bcm2711-rpi-4-b.dtb
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/bcm2837-rpi-3-b.dtb ]; then
 	rm -f /boot/bcm2837-rpi-3-b.dtb
 	dpkg-divert --package rpikernelhack --remove --rename /boot/bcm2837-rpi-3-b.dtb
@@ -364,6 +369,26 @@ if [ -f /usr/share/rpikernelhack/overlays/i2c1-bcm2708.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c1-bcm2708.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/i2c3.dtbo ]; then
+	rm -f /boot/overlays/i2c3.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c3.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/i2c4.dtbo ]; then
+	rm -f /boot/overlays/i2c4.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c4.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/i2c5.dtbo ]; then
+	rm -f /boot/overlays/i2c5.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c5.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/i2c6.dtbo ]; then
+	rm -f /boot/overlays/i2c6.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c6.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/i2s-gpio28-31.dtbo ]; then
 	rm -f /boot/overlays/i2s-gpio28-31.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2s-gpio28-31.dtbo
@@ -694,6 +719,11 @@ if [ -f /usr/share/rpikernelhack/overlays/spi-gpio35-39.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi-gpio35-39.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/spi-gpio40-45.dtbo ]; then
+	rm -f /boot/overlays/spi-gpio40-45.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi-gpio40-45.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/spi-rtc.dtbo ]; then
 	rm -f /boot/overlays/spi-rtc.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi-rtc.dtbo
@@ -739,6 +769,46 @@ if [ -f /usr/share/rpikernelhack/overlays/spi2-3cs.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi2-3cs.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/spi3-1cs.dtbo ]; then
+	rm -f /boot/overlays/spi3-1cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi3-1cs.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/spi3-2cs.dtbo ]; then
+	rm -f /boot/overlays/spi3-2cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi3-2cs.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/spi4-1cs.dtbo ]; then
+	rm -f /boot/overlays/spi4-1cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi4-1cs.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/spi4-2cs.dtbo ]; then
+	rm -f /boot/overlays/spi4-2cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi4-2cs.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/spi5-1cs.dtbo ]; then
+	rm -f /boot/overlays/spi5-1cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi5-1cs.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/spi5-2cs.dtbo ]; then
+	rm -f /boot/overlays/spi5-2cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi5-2cs.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/spi6-1cs.dtbo ]; then
+	rm -f /boot/overlays/spi6-1cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi6-1cs.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/spi6-2cs.dtbo ]; then
+	rm -f /boot/overlays/spi6-2cs.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/spi6-2cs.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/ssd1306.dtbo ]; then
 	rm -f /boot/overlays/ssd1306.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/ssd1306.dtbo
@@ -782,6 +852,26 @@ fi
 if [ -f /usr/share/rpikernelhack/overlays/uart1.dtbo ]; then
 	rm -f /boot/overlays/uart1.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/uart1.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/uart2.dtbo ]; then
+	rm -f /boot/overlays/uart2.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/uart2.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/uart3.dtbo ]; then
+	rm -f /boot/overlays/uart3.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/uart3.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/uart4.dtbo ]; then
+	rm -f /boot/overlays/uart4.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/uart4.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/uart5.dtbo ]; then
+	rm -f /boot/overlays/uart5.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/uart5.dtbo
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/overlays/udrc.dtbo ]; then
@@ -832,9 +922,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.50-v8-2f8d963db206-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.56-v8-9d1deec93fa8-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.50-v8-2f8d963db206-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.50-v8-2f8d963db206-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.50-v8-2f8d963db206-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.56-v8-9d1deec93fa8-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.56-v8-9d1deec93fa8-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.56-v8-9d1deec93fa8-bis+
 fi
 #DEBHELPER#
