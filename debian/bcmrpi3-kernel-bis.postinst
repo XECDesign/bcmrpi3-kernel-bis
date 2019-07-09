@@ -49,6 +49,11 @@ if [ -f /usr/share/rpikernelhack/overlays/README ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/README
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/act-led.dtbo ]; then
+	rm -f /boot/overlays/act-led.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/act-led.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/adau1977-adc.dtbo ]; then
 	rm -f /boot/overlays/adau1977-adc.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/adau1977-adc.dtbo
@@ -172,6 +177,16 @@ fi
 if [ -f /usr/share/rpikernelhack/overlays/dionaudio-loco.dtbo ]; then
 	rm -f /boot/overlays/dionaudio-loco.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/dionaudio-loco.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/disable-bt.dtbo ]; then
+	rm -f /boot/overlays/disable-bt.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/disable-bt.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/disable-wifi.dtbo ]; then
+	rm -f /boot/overlays/disable-wifi.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/disable-wifi.dtbo
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/overlays/dpi18.dtbo ]; then
@@ -497,6 +512,11 @@ fi
 if [ -f /usr/share/rpikernelhack/overlays/midi-uart1.dtbo ]; then
 	rm -f /boot/overlays/midi-uart1.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/midi-uart1.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/miniuart-bt.dtbo ]; then
+	rm -f /boot/overlays/miniuart-bt.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/miniuart-bt.dtbo
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/overlays/mmc.dtbo ]; then
@@ -922,9 +942,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.56-v8-9d1deec93fa8-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.57-v8-55b89745a478-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.56-v8-9d1deec93fa8-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.56-v8-9d1deec93fa8-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.56-v8-9d1deec93fa8-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.57-v8-55b89745a478-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.57-v8-55b89745a478-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.57-v8-55b89745a478-bis+
 fi
 #DEBHELPER#
