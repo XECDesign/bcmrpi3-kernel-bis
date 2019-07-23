@@ -374,9 +374,19 @@ if [ -f /usr/share/rpikernelhack/overlays/i2c0-bcm2708.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c0-bcm2708.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/i2c0.dtbo ]; then
+	rm -f /boot/overlays/i2c0.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c0.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/i2c1-bcm2708.dtbo ]; then
 	rm -f /boot/overlays/i2c1-bcm2708.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c1-bcm2708.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/i2c1.dtbo ]; then
+	rm -f /boot/overlays/i2c1.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/i2c1.dtbo
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/overlays/i2c3.dtbo ]; then
@@ -937,9 +947,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.58-v8-8222f38b1cea-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.59-v8-d996dd9b8b6c-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.58-v8-8222f38b1cea-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.58-v8-8222f38b1cea-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.58-v8-8222f38b1cea-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.59-v8-d996dd9b8b6c-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.59-v8-d996dd9b8b6c-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.59-v8-d996dd9b8b6c-bis+
 fi
 #DEBHELPER#

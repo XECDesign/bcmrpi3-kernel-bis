@@ -76,7 +76,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c-rtc.dtbo /boot/overlays/i2c-rtc.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c-sensor.dtbo /boot/overlays/i2c-sensor.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c0-bcm2708.dtbo /boot/overlays/i2c0-bcm2708.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c0.dtbo /boot/overlays/i2c0.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c1-bcm2708.dtbo /boot/overlays/i2c1-bcm2708.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c1.dtbo /boot/overlays/i2c1.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c3.dtbo /boot/overlays/i2c3.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c4.dtbo /boot/overlays/i2c4.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/i2c5.dtbo /boot/overlays/i2c5.dtbo
@@ -191,9 +193,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.58-v8-8222f38b1cea-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.59-v8-d996dd9b8b6c-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.58-v8-8222f38b1cea-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.58-v8-8222f38b1cea-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.58-v8-8222f38b1cea-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.59-v8-d996dd9b8b6c-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.59-v8-d996dd9b8b6c-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.59-v8-d996dd9b8b6c-bis+
 fi
 #DEBHELPER#
