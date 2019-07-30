@@ -304,6 +304,11 @@ if [ -f /usr/share/rpikernelhack/overlays/hifiberry-dacplusadc.dtbo ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-dacplusadc.dtbo
 	sync
 fi
+if [ -f /usr/share/rpikernelhack/overlays/hifiberry-dacplusadcpro.dtbo ]; then
+	rm -f /boot/overlays/hifiberry-dacplusadcpro.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-dacplusadcpro.dtbo
+	sync
+fi
 if [ -f /usr/share/rpikernelhack/overlays/hifiberry-digi-pro.dtbo ]; then
 	rm -f /boot/overlays/hifiberry-digi-pro.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-digi-pro.dtbo
@@ -947,9 +952,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.59-v8-689fc28a5af0-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.60-v8-2b3cf6c405f0-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.59-v8-689fc28a5af0-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.59-v8-689fc28a5af0-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.59-v8-689fc28a5af0-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.60-v8-2b3cf6c405f0-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.60-v8-2b3cf6c405f0-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.60-v8-2b3cf6c405f0-bis+
 fi
 #DEBHELPER#

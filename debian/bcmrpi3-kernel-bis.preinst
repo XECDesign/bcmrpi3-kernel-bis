@@ -62,6 +62,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/h
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dac.dtbo /boot/overlays/hifiberry-dac.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplus.dtbo /boot/overlays/hifiberry-dacplus.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplusadc.dtbo /boot/overlays/hifiberry-dacplusadc.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplusadcpro.dtbo /boot/overlays/hifiberry-dacplusadcpro.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-digi-pro.dtbo /boot/overlays/hifiberry-digi-pro.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-digi.dtbo /boot/overlays/hifiberry-digi.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hy28a.dtbo /boot/overlays/hy28a.dtbo
@@ -193,9 +194,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.59-v8-689fc28a5af0-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.60-v8-2b3cf6c405f0-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.59-v8-689fc28a5af0-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.59-v8-689fc28a5af0-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.59-v8-689fc28a5af0-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.60-v8-2b3cf6c405f0-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.60-v8-2b3cf6c405f0-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.60-v8-2b3cf6c405f0-bis+
 fi
 #DEBHELPER#
