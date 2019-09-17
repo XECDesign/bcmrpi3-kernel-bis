@@ -4,9 +4,9 @@ if [ -f /usr/share/rpikernelhack/COPYING.linux ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/COPYING.linux
 	sync
 fi
-if [ -f /usr/share/rpikernelhack/System.map ]; then
-	rm -f /boot/System.map
-	dpkg-divert --package rpikernelhack --remove --rename /boot/System.map
+if [ -f /usr/share/rpikernelhack/*.map ]; then
+	rm -f /boot/*.map
+	dpkg-divert --package rpikernelhack --remove --rename /boot/*.map
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/bcm2710-rpi-3-b-plus.dtb ]; then
@@ -307,6 +307,11 @@ fi
 if [ -f /usr/share/rpikernelhack/overlays/hifiberry-dacplusadcpro.dtbo ]; then
 	rm -f /boot/overlays/hifiberry-dacplusadcpro.dtbo
 	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-dacplusadcpro.dtbo
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/hifiberry-dacplusdsp.dtbo ]; then
+	rm -f /boot/overlays/hifiberry-dacplusdsp.dtbo
+	dpkg-divert --package rpikernelhack --remove --rename /boot/overlays/hifiberry-dacplusdsp.dtbo
 	sync
 fi
 if [ -f /usr/share/rpikernelhack/overlays/hifiberry-digi-pro.dtbo ]; then
@@ -957,9 +962,9 @@ fi
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.71-v8-13ce09db830e-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.73-v8-2b1731f8713e-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d
 fi
-if [ -d "/etc/kernel/postinst.d/4.19.71-v8-13ce09db830e-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.71-v8-13ce09db830e-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.71-v8-13ce09db830e-bis+
+if [ -d "/etc/kernel/postinst.d/4.19.73-v8-2b1731f8713e-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.73-v8-2b1731f8713e-bis+ --arg=/boot/kernel8.img /etc/kernel/postinst.d/4.19.73-v8-2b1731f8713e-bis+
 fi
 #DEBHELPER#

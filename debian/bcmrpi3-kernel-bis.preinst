@@ -2,7 +2,7 @@
 mkdir -p /usr/share/rpikernelhack/overlays
 mkdir -p /boot/overlays
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/COPYING.linux /boot/COPYING.linux
-dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/System.map /boot/System.map
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/*.map /boot/*.map
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2710-rpi-3-b-plus.dtb /boot/bcm2710-rpi-3-b-plus.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2710-rpi-3-b.dtb /boot/bcm2710-rpi-3-b.dtb
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/bcm2710-rpi-cm3.dtb /boot/bcm2710-rpi-cm3.dtb
@@ -63,6 +63,7 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/h
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplus.dtbo /boot/overlays/hifiberry-dacplus.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplusadc.dtbo /boot/overlays/hifiberry-dacplusadc.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplusadcpro.dtbo /boot/overlays/hifiberry-dacplusadcpro.dtbo
+dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-dacplusdsp.dtbo /boot/overlays/hifiberry-dacplusdsp.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-digi-pro.dtbo /boot/overlays/hifiberry-digi-pro.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hifiberry-digi.dtbo /boot/overlays/hifiberry-digi.dtbo
 dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/hy28a.dtbo /boot/overlays/hy28a.dtbo
@@ -195,9 +196,9 @@ dpkg-divert --package rpikernelhack --divert /usr/share/rpikernelhack/overlays/w
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/preinst.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.71-v8-13ce09db830e-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
+  run-parts -v --report --exit-on-error --arg=4.19.73-v8-2b1731f8713e-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d
 fi
-if [ -d "/etc/kernel/preinst.d/4.19.71-v8-13ce09db830e-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.71-v8-13ce09db830e-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.71-v8-13ce09db830e-bis+
+if [ -d "/etc/kernel/preinst.d/4.19.73-v8-2b1731f8713e-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.73-v8-2b1731f8713e-bis+ --arg=/boot/kernel8.img /etc/kernel/preinst.d/4.19.73-v8-2b1731f8713e-bis+
 fi
 #DEBHELPER#
