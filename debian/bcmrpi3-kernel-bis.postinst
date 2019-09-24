@@ -4,11 +4,6 @@ if [ -f /usr/share/rpikernelhack/COPYING.linux ]; then
 	dpkg-divert --package rpikernelhack --remove --rename /boot/COPYING.linux
 	sync
 fi
-if [ -f /usr/share/rpikernelhack/*.map ]; then
-	rm -f /boot/*.map
-	dpkg-divert --package rpikernelhack --remove --rename /boot/*.map
-	sync
-fi
 if [ -f /usr/share/rpikernelhack/bcm2710-rpi-3-b-plus.dtb ]; then
 	rm -f /boot/bcm2710-rpi-3-b-plus.dtb
 	dpkg-divert --package rpikernelhack --remove --rename /boot/bcm2710-rpi-3-b-plus.dtb
