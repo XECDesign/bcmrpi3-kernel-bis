@@ -2,9 +2,9 @@
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/prerm.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.75-v8-642e12d892e6-bis+ --arg=/boot/kernel8.img /etc/kernel/prerm.d
+  run-parts -v --report --exit-on-error --arg=4.19.76-v8-da7190d00893-bis+ --arg=/boot/kernel8.img /etc/kernel/prerm.d
 fi
-if [ -d "/etc/kernel/prerm.d/4.19.75-v8-642e12d892e6-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.75-v8-642e12d892e6-bis+ --arg=/boot/kernel8.img /etc/kernel/prerm.d/4.19.75-v8-642e12d892e6-bis+
+if [ -d "/etc/kernel/prerm.d/4.19.76-v8-da7190d00893-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.76-v8-da7190d00893-bis+ --arg=/boot/kernel8.img /etc/kernel/prerm.d/4.19.76-v8-da7190d00893-bis+
 fi
 #DEBHELPER#

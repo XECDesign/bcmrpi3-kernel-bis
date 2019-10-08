@@ -2,10 +2,10 @@
 INITRD=${INITRD:-"No"}
 export INITRD
 if [ -d "/etc/kernel/postrm.d" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.75-v8-642e12d892e6-bis+ --arg=/boot/kernel8.img /etc/kernel/postrm.d
+  run-parts -v --report --exit-on-error --arg=4.19.76-v8-da7190d00893-bis+ --arg=/boot/kernel8.img /etc/kernel/postrm.d
 fi
-if [ -d "/etc/kernel/postrm.d/4.19.75-v8-642e12d892e6-bis+" ]; then
-  run-parts -v --report --exit-on-error --arg=4.19.75-v8-642e12d892e6-bis+ --arg=/boot/kernel8.img /etc/kernel/postrm.d/4.19.75-v8-642e12d892e6-bis+
+if [ -d "/etc/kernel/postrm.d/4.19.76-v8-da7190d00893-bis+" ]; then
+  run-parts -v --report --exit-on-error --arg=4.19.76-v8-da7190d00893-bis+ --arg=/boot/kernel8.img /etc/kernel/postrm.d/4.19.76-v8-da7190d00893-bis+
 fi
 
 if [ -d /usr/share/rpikernelhack/overlays ]; then
